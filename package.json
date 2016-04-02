@@ -1,0 +1,17 @@
+{
+  "name": "home-ip-server",
+  "version": "0.1.0",
+  "description": "Keep up-to-date with dynamic ip address of home server.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "public-ip": "^1.2.0",
+    "request": "^2.69.0"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "ip": "",
+  "getPassword": "",
+  "postPassword": "",
+  "ipServerPostURL": "http://localhost:3000/post/ip"
+}
