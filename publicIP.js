@@ -11,6 +11,9 @@ var fs = require("fs"),
 
 setInterval(function () {
     publicIp.v4(function (err, ip) {
+        if (err) {
+            return console.log(err.stack);
+        }
         //if (ip !== config.ip) {
             console.log("new ip");
 
@@ -23,9 +26,11 @@ setInterval(function () {
                 function (error, response, body) {
                     if (!error && response.statusCode === 200) {
                         console.log(body);
+                    } else {
+                        console.log(error);
                     }
                 }
             );
         //}
     });
-}, 600000);
+}, 300000);
