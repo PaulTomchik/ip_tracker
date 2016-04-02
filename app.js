@@ -9,7 +9,9 @@ var fs = require('fs') ,
 var config = JSON.parse(fs.readFileSync("config.json")),
     getPassword = config.getPassword ,
     postPassword = config.postPassword ,
-    latestIP = null;
+    latestIP = null,
+    port = config.ipServerPort || 3000;
+
 
 
 app.use(bodyParser.json());
@@ -40,6 +42,6 @@ app.post('/post/ip', function (req, res) {
     }
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(port, function () {
+  console.log('App listening on port ' + port);
 });
